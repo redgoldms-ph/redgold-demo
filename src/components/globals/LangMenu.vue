@@ -1,11 +1,11 @@
 <template>
-  <Button @click="toggle" icon="pi pi-globe" text rounded severity="secondary" class="text-white lang-btn desktop"
-    aria-label="Filter" />
+  <!-- <Button @click="toggle" icon="pi pi-globe" text rounded severity="secondary" class="text-white lang-btn desktop"
+    aria-label="Filter" /> -->
   <Button @click="handleModalToggle(true)" icon="pi pi-globe" text rounded severity="secondary"
-    class="text-white lang-btn mobile" aria-label="Filter" />
+    class="text-white lang-btn" aria-label="Filter" />
   <Menu :model="items" class="lang-menu" popup ref="userMenu" />
   <Dialog v-model:visible="isModalOpen" modal :header="$t('Choose a language')"
-    :breakpoints="{ '800px': '90vw', '500px': '90vw' }">
+    :breakpoints="{ '2000px': '40vw', '800px': '90vw', '500px': '90vw' }">
     <Menu :model="items" class="lang-menu" />
   </Dialog>
 </template>
