@@ -38,6 +38,7 @@ import CasinoChip from "@/assets/img/icons/casino-cip.svg"
 import User from "@/assets/img/icons/user.svg"
 import Home from "@/assets/img/icons/home.svg"
 import LogoIcon from "@/assets/img/logos/logo-icon.png"
+import Avatar from "@/assets/img/icons/user2.png"
 export default {
   data() {
     return {
@@ -66,17 +67,17 @@ export default {
               label:"Live"
             },
             {
+              icon: Avatar,
+              label:"Profile",
+              command: ()=>{
+                this.handleModalToggle(true)
+              }
+            },
+            {
               icon: Home,
               label:"Home",
               command: ()=>{
                 this.redirectToMobile()
-              }
-            },
-            {
-              icon: User,
-              label:"Profile",
-              command: ()=>{
-                this.handleModalToggle(true)
               }
             },
           ]

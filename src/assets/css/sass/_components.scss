@@ -461,8 +461,36 @@ a,button{
       }
     }
   }
+  &.landscape{
+    width: calc(100% / 3 - 7px);
+    .circular-timer{
+      left: 9px;
+      top: 50px;
+    }
+    .gamecard-body-footer-wrapper{
+      display: flex;
+    }
+    .game-card-body{
+      width: 45%;
+      .pop-up{
+        font-size: 23px;
+      }
+      .game-card-details{
+        .details{
+          gap: 10px;
+          font-size: 10px;
+        }
+      }
+    }
+    .game-card-footer{
+      display: flex;
+      width: calc(100% - 45%);
+      img{
+        width: calc(100% / 2);
+      }
+    }
+  }
 }
-
 
 .circular-timer {
   display: flex;

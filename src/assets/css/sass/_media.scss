@@ -4,6 +4,16 @@
   }
 }
 @media (max-width:1280px){
+  .demo-header{
+    .right-side{
+      .news-wrapper{
+        width: 56%;
+        .announcement-slide{
+          width: 100%;
+        }
+      }
+    }
+  }
   .demo-banner{
     img{
       width: 465px;
@@ -35,17 +45,28 @@
   }
   .game-card{
     width: calc(100% / 3 - 8px);
+    &.landscape{
+      width: calc(100% / 2 - 7px);
+    }
   }
 }
 @media (max-width:980px){
   .game-card{
     width: calc(100% / 2 - 8px);
   }
+  .demo-header{
+    padding: 25px 12px;
+  }
+  section{
+    &#demo-content{
+      padding: 20px 12px;
+    }
+  }
 }
 @media (max-width:800px){
   .demo-banner{
     height: 243px;
-    margin-top: 60px !important;
+    margin-top: 90px !important;
     .banner-title-wrapper{
       transform: unset;
       top: 50%;
@@ -126,9 +147,10 @@
     width: 100%;
     left:0;
     padding: 20px 10px;
+    flex-wrap: wrap;
     .right-side{
-      .announcement-slide{
-        width: calc(100% - 63px);
+      .news-wrapper{
+        display: none;
       }
     }
     .lang-btn{
@@ -190,6 +212,11 @@
       }
     }
   }
+  .game-card{
+    &.landscape{
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width:625px){
@@ -243,6 +270,11 @@
           right: 10vw;
         }
       }
+    }
+  }
+  .demo-header{
+    .left-side{
+      gap: 0;
     }
   }
 }

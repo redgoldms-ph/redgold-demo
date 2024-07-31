@@ -1,27 +1,50 @@
 <template>
   <div :class="{ 'active': hasScrolled, 'demo-header mb-7': true }">
     <div class="right-side">
-      <span class="pi pi-megaphone"></span>
-      <div class="announcement-slide">
-        <marquee>{{ $t(newsText) }}</marquee>
+      <div class="flex items-center gap-2 mr-5 whitespace-nowrap">
+        <AvatarGroup>
+          <Avatar :image="Avatar" shape="circle" />
+          <Avatar :image="Avatar2" shape="circle" />
+          <Avatar :image="Avatar3" shape="circle" />
+        </AvatarGroup>
+        <span class="text-slate-400">Online Users</span>
+        <span>20,000</span>
+      </div>
+      <div class="news-wrapper flex items-center gap-2">
+        <span class="pi pi-megaphone"></span>
+        <div class="announcement-slide">
+          <marquee scrollamount="3">{{ $t(newsText) }}</marquee>
+        </div>
       </div>
     </div>
     <div class="left-side">
       <div class="money">
-        <i class="fa-solid fa-won-sign"></i>
         <div>100,000</div>
+        <i class="fa-solid fa-arrows-rotate"></i>
       </div>
-      <Button @click="toggle" icon="fa-solid fa-circle-user" text rounded severity="secondary"
-        class="text-white desktop" aria-label="Filter" />
+      <!-- <Button @click="toggle" icon="fa-solid fa-circle-user" text rounded severity="secondary"
+        class="text-white desktop" aria-label="Filter" /> -->
+      <Avatar @click="toggle" :image="Avatar" class="mr-2 cursor-pointer desktop" size="large" shape="circle" />
       <LangMenu/>
+    </div>
+    <div class="news-wrapper-2 mobile items-center gap-2 mt-2">
+      <div class="flex items-center">
+        <marquee scrollamount="3">{{ $t(newsText) }}</marquee>
+      </div>
     </div>
   </div>
   <Menu :model="items" class="lang-menu" popup ref="op" />
 </template>
 <script>
+import Avatar from "@/assets/img/icons/user.png"
+import Avatar2 from "@/assets/img/icons/user2.png"
+import Avatar3 from "@/assets/img/icons/user3.png"
 export default {
   data() {
     return {
+      Avatar,
+      Avatar2,
+      Avatar3,
       newsText:"Experience the thrill of winning at our premier online casino, where Baccarat enthusiasts can enjoy an authentic and exhilarating gaming experience right from the comfort of their own home!",
       items: [
         { 

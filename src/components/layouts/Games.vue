@@ -1,14 +1,14 @@
 <template>
   <div class="flex items-center gap-4 mb-7">
-    <!-- <SelectButton v-model="value" :options="options" optionLabel="value" dataKey="value" optionValue="value" aria-labelledby="custom">
+    <SelectButton v-model="value" :options="options" optionLabel="value" dataKey="value" optionValue="value" aria-labelledby="custom">
       <template #option="slotProps">
         <i :class="slotProps.option.icon"></i>
       </template>
-    </SelectButton>-->
-    <span class="text-3xl bold">{{ $t("Live") }}</span>
+    </SelectButton>
+    <span class="text-2xl bold">{{ $t("Live") }}</span>
   </div>
   <div class="games-container">
-    <GameCard/>
+    <GameCard :is-landscape="value"/>
   </div>
 </template>
 <script>
