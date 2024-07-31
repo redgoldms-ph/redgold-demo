@@ -181,6 +181,11 @@
           gap: 20px;
           align-items: center !important;
           text-align:center;
+          .logos{
+            img{
+              width: 42px;
+            }
+          }
         }
       }
     }
@@ -207,7 +212,7 @@
   header{
     .my-container{
       img{
-        width: 159px;
+        width: 132px;
       }
     }
   }
@@ -227,6 +232,16 @@
     .p-carousel-item{
       &:not(.p-carousel-item-start):not(.p-carousel-item-end){
         transform: scale(1) !important;
+      }
+    }
+    button{
+      &:not(.p-carousel-indicator-button){
+        &.p-carousel-prev-button{
+          left: 10vw;
+        }
+        &.p-carousel-next-button{
+          right: 10vw;
+        }
       }
     }
   }

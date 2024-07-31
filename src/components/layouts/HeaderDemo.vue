@@ -3,7 +3,7 @@
     <div class="right-side">
       <span class="pi pi-megaphone"></span>
       <div class="announcement-slide">
-        <marquee>{{ newsText }}</marquee>
+        <marquee>{{ $t(newsText) }}</marquee>
       </div>
     </div>
     <div class="left-side">
@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      newsText:this.$t("Experience the thrill of winning at our premier online casino, where Baccarat enthusiasts can enjoy an authentic and exhilarating gaming experience right from the comfort of their own home!"),
+      newsText:"Experience the thrill of winning at our premier online casino, where Baccarat enthusiasts can enjoy an authentic and exhilarating gaming experience right from the comfort of their own home!",
       items: [
         { 
           label:'Mia Taylor',

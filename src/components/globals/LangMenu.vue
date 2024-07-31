@@ -63,6 +63,7 @@ export default {
       const locale = data
       this.$i18n.locale = locale;
       localStorage.setItem('locale', locale);
+      this.handleModalToggle(false)
     },
   }
 }
