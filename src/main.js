@@ -2,6 +2,9 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import { createI18n } from 'vue-i18n';
+//store
+import pinia from './stores' 
+import { useLayoutStore } from '@/stores/layout'
 //css
 import 'primeicons/primeicons.css'
 import '@/assets/css/style.scss'
@@ -35,6 +38,7 @@ const i18n = createI18n({
 
 const app = createApp(App)
 
+app.use(pinia)
 app.use(i18n);
 app.use(router)
 app.use(PrimeVue, {
@@ -44,5 +48,8 @@ app.use(PrimeVue, {
 });
 
 app.directive('animateonscroll', AnimateOnScroll);
+
+//global properties
+app.config.globalProperties.$layoutStore = useLayoutStore
 
 app.mount('#app')

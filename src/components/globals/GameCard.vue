@@ -1,5 +1,5 @@
 <template>
-  <div :class="{'game-card':true,'landscape':isLandscape}" v-for="item in 10">
+  <div :class="{'game-card':true,'landscape':isLandscape,'bg-white':layoutStore.cardTheme == 0}" v-for="item in 10">
     <Timer :time="32"/>
     <div class="game-card-header" v-if="!isLandscape">
       <div class="results">
@@ -53,6 +53,11 @@
 </template>
 <script>
 export default {
-  props:["isLandscape"]
+  props:["isLandscape"],
+  computed:{
+    layoutStore(){
+      return this.$layoutStore()
+    }
+  },
 }
 </script>

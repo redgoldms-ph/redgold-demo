@@ -49,5 +49,8 @@
   "PLAY": "游戏",
   "bigWheel": "大轮盘",
   "Choose a language": "选择语言",
+  "Choose board theme": "选择板主题",
+  "Light": "浅色",
+  "Dark": "深色",
   "Sign Out": "退出登录"
 }

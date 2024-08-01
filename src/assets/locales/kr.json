@@ -49,5 +49,8 @@
   "SHUFFLING": "셔플링",
   "PLAY": "플레이",
   "Choose a language": "언어 선택",
+  "Choose board theme": "보드 테마 선택",
+  "Light": "라이트",
+  "Dark": "다크",
   "Sign Out": "로그아웃"
 }

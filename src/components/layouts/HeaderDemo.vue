@@ -18,14 +18,12 @@
       </div>
     </div>
     <div class="left-side">
+      <LangMenu/>
       <div class="money">
         <div>100,000</div>
-        <i class="fa-solid fa-arrows-rotate"></i>
+        <i class="fa-solid fa-arrows-rotate cursor-pointer"></i>
       </div>
-      <!-- <Button @click="toggle" icon="fa-solid fa-circle-user" text rounded severity="secondary"
-        class="text-white desktop" aria-label="Filter" /> -->
       <Avatar @click="toggle" :image="Avatar" class="mr-2 cursor-pointer desktop" size="large" shape="circle" />
-      <LangMenu/>
     </div>
     <div class="news-wrapper-2 mobile items-center gap-2 mt-2">
       <div class="flex items-center">

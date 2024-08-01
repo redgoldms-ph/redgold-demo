@@ -18,7 +18,7 @@
     </template>
     <template #end>
       <div>
-        <LangMenu/>
+        <BoardThemeMenu/>
       </div>
     </template>
   </Menu>

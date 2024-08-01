@@ -50,5 +50,8 @@
   "PLAY":"PLAY",
   "Sign Out":"Sign Out",
   "Choose a language":"Choose a language",
+  "Choose board theme": "Choose board theme",
+  "Light": "Light",
+  "Dark": "Dark",
   "bigWheel": "Big Wheel"
 }
