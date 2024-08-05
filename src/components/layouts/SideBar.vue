@@ -18,7 +18,7 @@
     </template>
     <template #end>
       <div>
-        <BoardThemeMenu/>
+        <BoardThemeMenu ref="boardSettingsRef"/>
       </div>
     </template>
   </Menu>
@@ -36,7 +36,7 @@
 <script>
 import CasinoChip from "@/assets/img/icons/casino-cip.svg"
 import User from "@/assets/img/icons/user.svg"
-import Home from "@/assets/img/icons/home.svg"
+import Settings from "@/assets/img/icons/settings.svg"
 import LogoIcon from "@/assets/img/logos/logo-icon.png"
 import Avatar from "@/assets/img/icons/user2.png"
 export default {
@@ -74,10 +74,10 @@ export default {
               }
             },
             {
-              icon: Home,
-              label:"Home",
+              icon: Settings,
+              label:"Settings",
               command: ()=>{
-                this.redirectToMobile()
+                this.$refs.boardSettingsRef.handleModalToggle(true)
               }
             },
           ]

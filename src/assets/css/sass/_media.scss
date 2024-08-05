@@ -284,4 +284,10 @@
   .game-card{
     width: 100%;
   }
+  .board-theme-select{
+    flex-direction: column;
+    .p-togglebutton{
+      width: 100%;
+    }
+  }
 }

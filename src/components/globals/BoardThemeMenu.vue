@@ -4,7 +4,9 @@
       class="text-white lang-btn" aria-label="Filter" />
   </div>
   <Dialog v-model:visible="isModalOpen" modal :header="$t('Choose board theme')"
-    :breakpoints="{ '2000px': '30vw', '800px': '90vw', '500px': '90vw' }">
+    :breakpoints="{ '2000px': '30vw', '1500px': '70vw', '800px': '90vw', '500px': '90vw' }"
+    class="board-theme-modal"
+    >
     <SelectButton v-model="value" @change="handleSetTheme" optionValue="value" class="board-theme-select" :options="options" optionLabel="label" dataKey="value" aria-labelledby="custom">
       <template #option="slotProps">
         <div class="flex justify-between items-center w-full">

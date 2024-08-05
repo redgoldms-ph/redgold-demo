@@ -8,6 +8,7 @@ import { PrimeVueResolver } from '@primevue/auto-import-resolver';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/redgold-demo/',
   plugins: [
     vue(),
     vueJsx(),
